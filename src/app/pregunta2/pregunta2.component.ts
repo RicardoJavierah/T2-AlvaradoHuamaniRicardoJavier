@@ -11,4 +11,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class Pregunta2Component {
 
+  calculo (hora:HTMLInputElement,minuto:HTMLInputElement){
+    let calchora = parseInt(hora.value)*1500;
+    let calcmin = parseFloat(minuto.value)*(1500/60);
+    return calchora+calcmin;
+  }
+
 }
