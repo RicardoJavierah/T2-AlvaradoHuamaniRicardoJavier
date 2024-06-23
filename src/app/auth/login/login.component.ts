@@ -13,26 +13,23 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent {
 
-  usuario=""
-  password=""
+    constructor(private router: Router,
+      private authService: AuthService
+    ){
   
-  constructor(private router: Router,
-    private authService: AuthService
-  ){
+    }
+    
+    submit(usuario: HTMLInputElement,
+      password: HTMLInputElement
+    ):void{
+      if(usuario.value == "alvarado" && password.value =="12345"){
+        this.authService.login(usuario.value, password.value);
+      this.router.navigateByUrl("/menu-panel");
 
-  }
-  
-  submit(usuario: HTMLInputElement,
-    password: HTMLInputElement
-  ):void{
-
-    if(this.usuario == "alvarado" && this.password== "12345"){
-
-    this.authService.login(usuario.value, password.value);
-    alert("Bienvenido " + usuario + " " + password);
-    //this.router.navigateByUrl("/dashboard");
-    }//else{
-
+      }else{
+        alert("usuario y password invalido")
+      }
+      
     }
   }
   
