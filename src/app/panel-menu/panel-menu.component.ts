@@ -24,8 +24,8 @@ export class PanelMenuComponent {
   }
 
 
-  irHome():void{
-    this.router.navigate(["Preg2"], {relativeTo: this.route})
+  irPreDos():void{
+    this.router.navigate(["tiempo"], {relativeTo: this.route})
   }
   irCurso():void{
     this.router.navigate(["Preg3"], {relativeTo: this.route})
