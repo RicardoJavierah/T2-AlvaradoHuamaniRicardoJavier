@@ -24,7 +24,7 @@ export class LoginComponent {
     ):void{
       if(usuario.value == "alvarado" && password.value =="12345"){
         this.authService.login(usuario.value, password.value);
-      this.router.navigateByUrl("/menu-panel");
+      this.router.navigateByUrl("/menu");
 
       }else{
         alert("usuario y password invalido")
